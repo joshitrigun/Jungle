@@ -1,0 +1,49 @@
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <% @order.line_items.each do |line_item| %>
+            <% if product.id == line_item.product_id %>
+              <tr>
+                <td>
+                  <%= image_tag product.image.tiny %>
+                </td>
+                <td>
+                  <h4><%= product.name %></h4>
+                  <br>
+                  <%= product.description %>
+                </td>
+                <td>
+                  <%= humanized_money_with_symbol product.price %>
+                </td>
+                <td>
+                   
+                  <%= line_item.quantity %>
+                  
+                </td>
+                <td>
+                  <%= humanized_money_with_symbol product.price * line_item.quantity %>
+                </td>
+              </tr>
+              <% end %>
+            <% end %> 
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= humanized_money_with_symbol @order.total_cents / 100.0 %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
