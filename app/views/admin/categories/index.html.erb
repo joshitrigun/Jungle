@@ -1,11 +1,11 @@
 <section class="admin-products-index">
 
   <header class="page-header">
-    <h1>Admin &raquo; All Products</h1>
+    <h1>Admin &raquo; All Categories</h1>
   </header>
 
   <div class="well">
-    <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
   </div>
 
   <div class="panel panel-default products">
@@ -13,16 +13,16 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th colspan="2">Product</th>
+          <th>ID</th>
           <th>Category</th>
-          <th>Price</th>
-          <th>Qty Remaining</th>
+          <th>Created_at</th>
+          <th>Updated_at</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
        
-        <%= @categories.inspect %>
+        <%= render @categories %>
       </tbody>
     </table>
 
