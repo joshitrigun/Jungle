@@ -24,7 +24,11 @@
               <li><%= link_to category.name, category %></li>
             <% end %>
           </ul>
-        </li>
+        
+          </li>
+            <li>
+             <%= link_to 'About', [:about_index]  %>
+            </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
@@ -43,7 +47,8 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
-      </ul>
+        
+        </ul>
     </div>
   </div>
 </nav>
