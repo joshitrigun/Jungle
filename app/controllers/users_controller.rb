@@ -7,8 +7,10 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       redirect_to '/'
+      puts "User Created"
     else
       redirect_to '/signup'
+      puts "user not created"
     end
   end
 
