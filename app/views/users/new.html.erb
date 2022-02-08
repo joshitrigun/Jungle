@@ -4,9 +4,9 @@
     
   <%= form_for :user, url: '/users' do |f| %>
     <div class="mb-3">
-     <p>FirstName:<br> <%= f.text_field :name %></p>
+     <p>FirstName:<br> <%= f.text_field :first_name %></p>
     </div>
-    <div class="mb-3"><p>LastName:<br> <%= f.text_field :name   %></p></div>
+    <div class="mb-3"><p>LastName:<br> <%= f.text_field :last_name   %></p></div>
     <div class="mb-3"><p>Email:<br> <%= f.text_field :email %></p></div>
     <div class="mb-3"><p>Password:<br> <%= f.password_field :password %></p></div>
     <div class="mb-3"><p>Password Confirmation:<br> <%= f.password_field :password_confirmation %></p></div>
