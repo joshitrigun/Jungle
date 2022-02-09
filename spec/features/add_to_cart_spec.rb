@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor navigates to the homepage page", type: :feature, js: true do
+RSpec.feature "Visitor navigates to the homepage page to see updated cart", type: :feature, js: true do
 
 
   # SETUP

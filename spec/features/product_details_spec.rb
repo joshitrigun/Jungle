@@ -26,7 +26,7 @@ RSpec.feature "Visitor navigates to the product page", type: :feature, js: true 
     # click_on ".btn-default"
     first(".btn.btn-default").click()
     sleep 5
-    visit '/products/1'
+    # visit '/products/1'
     # DEBUG
     save_screenshot
 
